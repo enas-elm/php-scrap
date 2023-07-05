@@ -7,7 +7,7 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class Api
 {
-    public function scrapRequest()
+    public function scrapRequest(): array
     {
         $client = HttpClient::create();
         $response = $client->request(
@@ -18,12 +18,14 @@ class Api
 
         $html = $content;
 
+        $characters = [""];
+
         $crawler = new Crawler($html);
-        $crawler->filter('#gallery-0 .lightbox-caption')->each(function (Crawler $node, $i){
-            var_dump($node->text());
+        $crawler->filter('#gallery-0 .lightbox-caption')->each(function (Crawler $node, $i) use ($characters){
+            $characters[] = $node->text();
         });
 
-        return $node->text();
+        return $characters;
 
         // $crawler->filter('#gallery-0 .lightbox-caption')->each(function (Crawler $node, $i): string {
         //     return $node->text();
