@@ -10,14 +10,16 @@ use Symfony\Component\DomCrawler\Crawler;
 class Api
 {
     /**
-     * @return string[]
+     * @return array<int, string>
      */
     public function scrapRequest() : array 
     {
+        $scrapURL = 'https://harrypotter.fandom.com';
+
         $client = HttpClient::create();
         $response = $client->request(
             'GET',
-            'https://harrypotter.fandom.com/wiki/Main_Page'
+            $scrapURL
         );
         $content = $response->getContent();
 
@@ -26,9 +28,28 @@ class Api
         $characters = [];
 
         $crawler = new Crawler($html);
+
+
+        // Scrap characters names
         $crawler->filter('#gallery-0 .lightbox-caption')->each(function (Crawler $node, $i) use (&$characters){
             $characters[] = $node->text();
         });
+
+        
+        // Scrap characters links
+        $links = $crawler->filter('#gallery-0 .link-internal');
+
+        foreach ($links as $link) {
+            $characters[] = $scrapURL. $link->getAttribute('href');
+        }
+
+
+     
+        // $links = $crawler->filter('#gallery-0 .link-internal')->attr('href');
+        //   foreach ($links as $link) {
+        //     $characters[] = $scrapURL. $link;
+        // }
+       
 
         return $characters;
     }

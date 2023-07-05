@@ -1,8 +1,24 @@
-# Scrap with PHP
+# Harry potter scrap 🪄
 
-A demo package
+This is a package for all the big fans of Harry Potter. 🧙
+
+It will get you to scrap some characters and their links.
+
+Once the installation done, run this command to see the charcters names and links.
+
+```bash
+php build/index.php
+```
 
 ## Installation
+
+Git clone the project
+
+In case, run these commands
+
+```bash
+composer install
+```
 
 ## Local development
 
@@ -11,13 +27,9 @@ composer install
 ```
 
 ```bash
-php vendor/bin/phpstan analyze src --level=max
+php composer phpstan
 ```
 
 ```bash
-php vendor/bin/phpunit tests
-```
-
-```bash
-php build/index.php
+php composer test
 ```
