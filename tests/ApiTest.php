@@ -10,6 +10,7 @@ class ApiTest extends TestCase
         $api = new Api();
 
         $this->assertIsArray($api->scrapRequest());
+        $this->assertNotEmpty($api->scrapRequest());
     }
 }
 

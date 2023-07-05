@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'en_na/oss-td',
+        'name' => 'en_na/scrap-td',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
         'reference' => '3b61072757b201499627848405c2f30590ed2884',
