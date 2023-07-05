@@ -1,15 +1,28 @@
 <?php
 
-declare(strict_types=1);
-namespace EnNa\OssTd;
+namespace  EnNa\OssTd;
+
+use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Component\DomCrawler\Crawler;
 
 class Api
 {
-    public function getRandomNumber(): int
+    public function scrapRequest()
     {
-        return rand(0, 100);
+        $client = HttpClient::create();
+        $response = $client->request(
+            'GET',
+            'https://harrypotter.fandom.com/wiki/Main_Page'
+        );
+        $content = $response->getContent();
+
+        $html = $content;
+
+        $crawler = new Crawler($html);
+        $crawler->filter('#gallery-0 .lightbox-caption')->each(function (Crawler $node, $i){
+            var_dump($node->text());
+        });
     }
 }
-
 
 ?>
