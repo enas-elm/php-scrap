@@ -1,0 +1,28 @@
+{
+    "name": "en_na/oss-td",
+    "description": "Demo package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "EnNa\\OssTd\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Enas",
+            "email": "enas.elmershati@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.6||^10.2"
+    },
+    "scripts": {
+        "phpstan": "@php vendor/bin/phpstan analyze src --level=max",
+        "test": "@php vendor/bin/phpunit tests"
+    }
+}
