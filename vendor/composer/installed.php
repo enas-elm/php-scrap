@@ -3,7 +3,7 @@
         'name' => 'en_na/scrap-td',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '3b61072757b201499627848405c2f30590ed2884',
+        'reference' => '2d2efa3443b9d7fff0fb6988c84dee94da2b32a4',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'en_na/scrap-td' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '3b61072757b201499627848405c2f30590ed2884',
+            'reference' => '2d2efa3443b9d7fff0fb6988c84dee94da2b32a4',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

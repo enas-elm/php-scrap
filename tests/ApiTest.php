@@ -3,6 +3,8 @@
 use EnNa\ScrapTd\Api;
 use PHPUnit\Framework\TestCase;
 
+require __DIR__ . "/../src/api.php";
+
 class ApiTest extends TestCase
 {
     public function testScrapRequest()
