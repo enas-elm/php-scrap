@@ -22,6 +22,12 @@ class Api
         $crawler->filter('#gallery-0 .lightbox-caption')->each(function (Crawler $node, $i){
             var_dump($node->text());
         });
+
+        return $node->text();
+
+        // $crawler->filter('#gallery-0 .lightbox-caption')->each(function (Crawler $node, $i): string {
+        //     return $node->text();
+        // });
     }
 }
 

@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"ApiTest::testGetRandomNumber":0.007}}
+{"version":1,"defects":{"ApiTest::testScrapRequest":5},"times":{"ApiTest::testGetRandomNumber":0.007,"ApiTest::testScrapRequest":0.98}}

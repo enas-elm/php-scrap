@@ -5,10 +5,11 @@ use PHPUnit\Framework\TestCase;
 
 class ApiTest extends TestCase
 {
-    public function testGetRandomNumber()
+    public function testScrapRequest()
     {
         $api = new Api();
-        $this->assertIsInt($api->getRandomNumber());
+
+        $this->assertIsString($api->scrapRequest());
     }
 }
 
