@@ -17,6 +17,6 @@ return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'Masterminds\\' => array($vendorDir . '/masterminds/html5/src'),
-    'EnNa\\OssTd\\' => array($baseDir . '/src'),
+    'EnNa\\ScrapTd\\' => array($baseDir . '/src'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
 );

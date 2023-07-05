@@ -1,6 +1,6 @@
 <?php
 
-use EnNa\OssTd\Api;
+use EnNa\ScrapTd\Api;
 use PHPUnit\Framework\TestCase;
 
 class ApiTest extends TestCase

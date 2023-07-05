@@ -1,13 +1,16 @@
 <?php
 
-namespace  EnNa\OssTd;
+namespace  EnNa\ScrapTd;
 
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\DomCrawler\Crawler;
 
 class Api
 {
-    public function scrapRequest() : array
+    /**
+     * @return string[]
+     */
+    public function scrapRequest() : array 
     {
         $client = HttpClient::create();
         $response = $client->request(
@@ -24,12 +27,7 @@ class Api
         $crawler->filter('#gallery-0 .lightbox-caption')->each(function (Crawler $node, $i) use (&$characters){
             $characters[] = $node->text();
         });
-
         return $characters;
-
-        // $crawler->filter('#gallery-0 .lightbox-caption')->each(function (Crawler $node, $i): string {
-        //     return $node->text();
-        // });
     }
 }
 

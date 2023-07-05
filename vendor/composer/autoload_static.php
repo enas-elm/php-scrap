@@ -38,7 +38,7 @@ class ComposerStaticInit81c870b6792c76e71189704779c7feef
         ),
         'E' => 
         array (
-            'EnNa\\OssTd\\' => 11,
+            'EnNa\\ScrapTd\\' => 11,
         ),
         'D' => 
         array (
@@ -91,7 +91,7 @@ class ComposerStaticInit81c870b6792c76e71189704779c7feef
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
-        'EnNa\\OssTd\\' => 
+        'EnNa\\ScrapTd\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
