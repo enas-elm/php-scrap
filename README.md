@@ -14,7 +14,7 @@ php build/index.php
 
 Git clone the project
 
-In case, run this command
+Run this command
 
 ```bash
 composer install
