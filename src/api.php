@@ -27,6 +27,7 @@ class Api
         $crawler->filter('#gallery-0 .lightbox-caption')->each(function (Crawler $node, $i) use (&$characters){
             $characters[] = $node->text();
         });
+
         return $characters;
     }
 }
