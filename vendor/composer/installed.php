@@ -10,7 +10,7 @@
         'dev' => true,
     ),
     'versions' => array(
-        'en_na/oss-td' => array(
+        'en_na/scrap-td' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
             'reference' => '3b61072757b201499627848405c2f30590ed2884',

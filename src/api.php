@@ -1,6 +1,8 @@
 <?php
 
-namespace  EnNa\ScrapTd;
+declare(strict_types=1);
+
+namespace EnNa\ScrapTd;
 
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\DomCrawler\Crawler;
